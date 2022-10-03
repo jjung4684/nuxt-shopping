@@ -38,6 +38,6 @@ export default {
     fallback: true,
   },
   server: {
-    port: 8000 // default: 3000
+    port : process.env.NODE_ENV === 'production'?null:8000
   }
 }
