@@ -14,6 +14,16 @@ import CartList from "@/components/CartList";
 
 export default {
   name: "cart",
+  head: {
+    title: 'Shopping Cart',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '카트 페이지입니다.',
+      },
+    ],
+  },
   components: {CartList},
   // async asyncData({store}){
     // await store.dispatch(FETCH_CART_ITEMS);

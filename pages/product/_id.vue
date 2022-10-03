@@ -20,6 +20,22 @@
 <script>
 import { createCartItem, fetchProductById } from '@/api'
 export default {
+  head: {
+    title: 'Shopping Item Detail',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description' ,
+        content:`상품 상세 페이지`,
+      },
+    ],
+    // link: [
+    //   {
+    //     rel: 'stylesheet',
+    //     href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+    //   }
+    // ]
+  },
   async asyncData({ params }) {
     const response = await fetchProductById(params.id)
     return { product: response.data }
