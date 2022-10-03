@@ -39,5 +39,8 @@ export default {
   },
   server: {
     port : process.env.NODE_ENV === 'production'?null:8000
+  },
+  env : {
+    baseURL : process.env.NODE_ENV === 'production'? 'https://my-json-server.typicode.com/jjung4684/nuxt-shopping-api':'http://localhost:3000'
   }
 }
